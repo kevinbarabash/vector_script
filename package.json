@@ -1,0 +1,19 @@
+{
+  "name": "vector_script",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Barabash (kevinb7@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "escodegen": "^1.6.1",
+    "esprima": "^2.1.0",
+    "estraverse": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel": "^4.7.16"
+  }
+}
