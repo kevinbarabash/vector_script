@@ -23,3 +23,15 @@ eval(gen);
 // instead of printint out values
 
 // underscores -> properties, e.g a_0 -> a["0"], a_x -> a["x"]
+
+
+var parser = require('./src/parser.js');
+
+code = 'a = (1,2,3)\n' +  // a is a vector
+    'b = (0,-1,1)\n' +    // b is a vector
+    'c = a * b\n' +       // dot produces a scalar
+    'sqrt(a * a)';        // norm(a)
+
+var ast = parser.parse(code);
+
+console.log(ast);

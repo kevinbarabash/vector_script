@@ -1,6 +1,7 @@
 // function stubs
 function print() {}
 function sqrt() {}
+function dot() {}
 
 var x = 5;
 var a = [1,2,3];
