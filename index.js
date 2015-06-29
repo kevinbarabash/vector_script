@@ -25,13 +25,21 @@ eval(gen);
 // underscores -> properties, e.g a_0 -> a["0"], a_x -> a["x"]
 
 
-var parser = require('./src/parser.js');
+var Parser = require('./src/parser.js');
+var parser = new Parser();
 
-code = 'a = (1,2,3)\n' +  // a is a vector
-    'b = (0,-1,1)\n' +    // b is a vector
-    'c = a * b\n' +       // dot produces a scalar
-    'sqrt(a * a)';        // norm(a)
+code = 'a = (1,23,34)\n' +  // a is a vector
+    'b = (0,-11,1)\n' +     // b is a vector
+    '(1,4,9)\n'
+    //'c = a * b\n' +       // dot produces a scalar
+    //'sqrt(a * a)';        // norm(a)
 
 var ast = parser.parse(code);
 
 console.log(ast);
+
+ast.forEach(function (stmt) {
+    if (stmt.right) {
+        console.log(stmt.right);
+    }
+});
